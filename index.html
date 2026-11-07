@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#faf6f0">
+  <title>Diccionario emocional del cuerpo</title>
+  <meta name="description" content="Una lectura simbólica y emocional de las dolencias del cuerpo, para reflexionar y conocerte mejor. No reemplaza la atención médica.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <h1>Diccionario emocional del cuerpo</h1>
+    <p>Una invitación a escuchar lo que tu cuerpo quizás está diciendo.</p>
+  </header>
+
+  <div class="stickybar">
+    <div class="search">
+      <label for="q" class="sr">Buscar</label>
+      <input id="q" type="search" placeholder="Buscar dolencia…" autocomplete="off" enterkeyhint="search">
+      <button id="clear" type="button" aria-label="Borrar búsqueda" hidden>×</button>
+    </div>
+    <button id="openIndex" class="open-index" type="button" aria-controls="index" aria-expanded="false">
+      <span aria-hidden="true">☰</span> Índice <span id="countBtn" class="count"></span>
+    </button>
+  </div>
+
+  <details class="notice" id="notice">
+    <summary><span><strong>Importante:</strong> no es un diagnóstico médico</span></summary>
+    <p>Esto es una lectura <em>simbólica y reflexiva</em>, no una explicación científica del origen de una enfermedad.
+    La investigación confirma que las emociones y el estrés influyen en cómo vivimos el cuerpo, pero no que una emoción concreta cause una enfermedad concreta.
+    Ante cualquier síntoma, consultá con un profesional de la salud. <a href="#fuentes">Ver fuentes y límites</a></p>
+  </details>
+
+  <div class="layout">
+    <aside class="index" id="index" aria-label="Índice">
+      <div class="index-head">
+        <h2>Índice</h2>
+        <span id="count" class="count"></span>
+        <button id="closeIndex" class="close-index" type="button" aria-label="Cerrar índice">×</button>
+      </div>
+      <nav id="list"></nav>
+    </aside>
+    <div id="scrim" class="scrim" hidden></div>
+
+    <main id="main" tabindex="-1">
+      <section id="welcome" class="card welcome">
+        <h2>Bienvenido/a</h2>
+        <p>Muchas tradiciones —desde la medicina psicosomática hasta la metafísica del cuerpo y la biodescodificación— proponen mirar las dolencias también como un lenguaje: algo que el cuerpo expresa cuando hay emociones sin espacio.</p>
+        <p>Para cada dolencia vas a encontrar <strong>la emoción asociada</strong>, <strong>lo que podría estar reprimido</strong>, <strong>lo que quizás pasa en la vida de la persona</strong> y <strong>preguntas para reflexionar</strong>.</p>
+        <p>Usalo como espejo, no como sentencia. Si algo no resuena, descartalo. Nadie «se enferma por no haber sentido bien».</p>
+        <p class="hint">Buscá arriba o abrí el índice. También podés filtrar por zona:</p>
+        <div class="chips" id="cats"></div>
+      </section>
+      <article id="entry" class="card" hidden></article>
+      <section id="results" class="card" hidden></section>
+    </main>
+  </div>
+
+  <section id="fuentes" class="sources">
+    <h2>Fuentes y límites</h2>
+    <p>Las lecturas de este diccionario están redactadas en forma original a partir de ideas comunes a distintas tradiciones simbólicas (psicosomática psicodinámica, metafísica del cuerpo, biodescodificación/bioneuroemoción) y de lo que la investigación sí respalda: que el estrés, la dificultad para identificar y expresar emociones y las experiencias traumáticas se relacionan con más dolor, más malestar físico y peor calidad de vida.</p>
+    <p>Lo que <strong>no</strong> está demostrado: que cada enfermedad tenga una única causa emocional, o que sanar una emoción cure una enfermedad. Algunas fuentes divulgativas incluso describen la biodescodificación como pseudociencia. Por eso este sitio no promete curas ni diagnostica.</p>
+    <ul id="fuentes-list"></ul>
+  </section>
+
+  <footer>
+    <p>Este contenido es solo informativo y de autoconocimiento. No sustituye la atención médica ni psicológica. Si estás en crisis emocional, buscá ayuda profesional o de tu línea local de salud mental.</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="data-extra-1.js"></script>
+  <script src="data-extra-2.js"></script>
+  <script src="data-extra-3.js"></script>
+  <script src="data-extra-4.js"></script>
+  <script src="data-extra-5.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
